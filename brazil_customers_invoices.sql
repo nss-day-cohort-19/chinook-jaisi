@@ -1,0 +1,3 @@
+/*brazil_customers_invoices.sql: Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.*/
+
+select ( c.firstname || " " || c.lastname) as name, i.invoiceid, i.invoicedate, i.billingcountry from invoice i join customer c on i.customerid = c.customerid where billingcountry='Brazil'
