@@ -2,7 +2,7 @@
 
 select count(il.trackid) as my_count, t.name from track t join invoiceline il on t.trackid=il.trackid join invoice i on i.invoiceid=il.invoiceid
 where strftime('%Y',i.invoicedate) = '2013' 
-group by t.name
+group by t.trackid
 order by my_count  desc
 limit 1
 
